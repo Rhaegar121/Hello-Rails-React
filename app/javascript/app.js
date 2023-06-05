@@ -1,7 +1,7 @@
 import {
     BrowserRouter, Route,
   } from 'react-router-dom';
-  import Greeting from './Greeting';
+import Greeting from './greeting';
   
   const App = () => (
     <BrowserRouter>
