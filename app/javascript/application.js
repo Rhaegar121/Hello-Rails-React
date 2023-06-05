@@ -2,23 +2,17 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import App from './app';
 
-const App = () => {
-  const [greeting, setGreeting] = useState('');
-
-  useEffect(() => {
-    fetch('/api/random_greeting')
-      .then(response => response.json())
-      .then(data => setGreeting(data.greeting));
-  }, []);
-
-  return (
-    <div>
-      <h1>{greeting}</h1>
-    </div>
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+);

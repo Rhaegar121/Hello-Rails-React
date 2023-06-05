@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import detailsSlice from './detail/detailsSlice';
+import messagesSlice from './messagesSlice';
 
 const store = configureStore({
   reducer: {
-    details: detailsSlice,
+    messages: messagesSlice,
   },
 });
 
