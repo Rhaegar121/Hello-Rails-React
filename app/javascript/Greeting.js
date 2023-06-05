@@ -12,7 +12,10 @@ const Greeting = () => {
 
   return (
     <div>
-      <h1>{messages}</h1>
+        <h1>
+            <span>Random Greeting: </span>
+            <span>{messages}</span>
+        </h1>
     </div>
   );
 };

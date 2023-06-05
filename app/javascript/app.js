@@ -5,7 +5,7 @@ import Greeting from './greeting';
   
   const App = () => (
     <BrowserRouter>
-      <Route exact path="/" component={Greeting} />
+      <Route path="/" element={<Greeting />} />
     </BrowserRouter>
   );
   
