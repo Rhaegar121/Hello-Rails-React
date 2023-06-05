@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchMessage = createAsyncThunk('fetchMessage', async () => {
-  const response = await fetch(`/api/random_greeting`);
+  const response = await fetch('/api/random_greeting');
   const data = await response.json();
   return data;
 });
@@ -12,7 +12,7 @@ const messagesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchDetail.fulfilled, (state, action) => action.payload);
+      .addCase(fetchMessage.fulfilled, (state, action) => action.payload);
   },
 });
 

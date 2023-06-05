@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchMessage } from './redux/messagesSlice';
 
 const Greeting = () => {
-  const messages = useSelector(state => state.messages);
+  const messages = useSelector((state) => state.messages);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -12,10 +12,10 @@ const Greeting = () => {
 
   return (
     <div>
-        <h1>
-            <span>Random Greeting: </span>
-            <span>{messages}</span>
-        </h1>
+      <h1>
+        <span>Random Greeting: </span>
+        <span>{messages}</span>
+      </h1>
     </div>
   );
 };
